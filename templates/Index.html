@@ -10,17 +10,38 @@ Template da rota inicial
 <h2>Todos os Trecos</h2>
 
 {% if total > 0 %}
-    {% for content in contents %}
-       <p>
-    <img src="{{ content.photo }}" alt="{{ content.name }}" width="100"><br>
-    <a href="{{ url_for('view', thing_id=content.id) }}">{{ content.name }}</a>
-</p>
-    {% endfor %}
+
+    <div class="container">
+        <div class="row">
+
+            {% for content in contents %}
+
+                <div class="col p-3 bg-dark text-white">
+
+                    <img src="{{ content.photo }}"
+                         alt="{{ content.name }}"
+                         width="100">
+
+                    <br>
+
+                    <a href="{{ url_for('view', thing_id=content.id) }}">
+                        {{ content.name }}
+                    </a>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+
 {% else %}
+
     <p>
         Nenhum treco cadastrado ainda!
         <a href="{{ url_for('new_thing') }}">Cadastre um treco</a>
     </p>
+
 {% endif %}
 
 {% endblock %}
