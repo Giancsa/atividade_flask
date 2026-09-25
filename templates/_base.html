@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -11,17 +11,25 @@
 
 <body>
     <header>
-        <div class="container mt-3">
-            <div class="mt-0 p-5 bg-primary text-white rounded">
-                <h1>Trecos</h1>
-               
+
+        <div class="container mt-1">
+            <div class="p-5 bg-primary text-white rounded">
+                <div>
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo Trecos" 
+                    class="img-fluid"
+                    width="100"
+                    >
+                </div>
+
+                <h1 class="text-center">Trecos</h1>
+
             </div>
         </div>
     </header>
 
-   
 
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark rounded" >
         <div class="container-fluid">
             <a class="navbar-brand" href="javascript:void(0)">Logo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -50,7 +58,19 @@
 
     <main>
         {# O conteúdo do template da rota aparece aqui! #}
-        {% block main %}{%endblock%}
+
+
+        {# Exibe mensagens "flash" vindas da session #}
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endwith %}
+
+        {# O conteúdo do template da rota aparece aqui! #}
+        {% block main %}{% endblock %}
     </main>
     <hr>
 
