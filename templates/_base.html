@@ -9,29 +9,33 @@
     <title>Cadastro de Trecos</title>
 </head>
 
-<body>
+<body class="container">
     <header>
 
-        <div class="container mt-1">
-            <div class="p-5 bg-primary text-white rounded">
-                <div>
-                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo Trecos" 
-                    class="img-fluid"
-                    width="100"
-                    >
-                </div>
+        <div class=" mt-1">
 
-                <h1 class="text-center">Trecos</h1>
 
+            <div class="p-5 bg-primary text-white rounded-top ">
+                <div class="d-flex align-items-center               justify-content-start">
+                    <a href="{{ url_for('index') }}">
+                     <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo Trecos" class="img-fluid"
+                        width="100">
+                    </a>
+                
+                    <a href="{{ url_for('index') }}" class="text-light text-decoration-none"><h1 class="ms-1">Trecos</h1></a>
+                      
+                </div> 
             </div>
+
         </div>
+        
     </header>
 
 
 
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark rounded" >
-        <div class="container-fluid">
-            <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark rounded-bottom">
+        <div class="container">
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
