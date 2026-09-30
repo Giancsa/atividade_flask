@@ -1,5 +1,21 @@
+.logo-trecos {
+    width: 200px;
+}
+
+.titulo-trecos {
+    font-size: 3rem;
+}
+
 @media (max-width: 768px) {
-    body {
-        background-color: red;
+    .logo-trecos {
+        width: 120px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .titulo-trecos {
+        text-align: center;
+        width: 100%;
+        font-size: 2rem;
     }
 }
