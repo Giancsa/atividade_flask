@@ -1,6 +1,5 @@
 import random
 from flask import Flask, abort, flash, redirect, render_template, request, url_for
-from flask_bootstrap import Bootstrap5
 import sqlite3
 
 app = Flask(__name__)
