@@ -2,8 +2,11 @@
     width: 200px;
 }
 
+
 .titulo-trecos {
+    text-align: center;
     font-size: 3rem;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -12,10 +15,14 @@
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
     .titulo-trecos {
-        text-align: center;
-        width: 100%;
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .titulo-trecos {
+        font-size: 1.2rem;
     }
 }
