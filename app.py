@@ -3,13 +3,14 @@ from flask import Flask, abort, flash, redirect, render_template, request, url_f
 import sqlite3
 
 app = Flask(__name__)
-
-from flask import Flask, render_template
-import sqlite3
-
-app = Flask(__name__)
 app.secret_key = 'e960f7c65dd309f32faaa36ddfb1d020a98195993b72ea119df1576ea1310b42'
 
+
+print("====================================")
+print("ROOT PATH:", app.root_path)
+print("TEMPLATE FOLDER:", app.template_folder)
+print("TEMPLATE PATH:", app.root_path + "/templates")
+print("====================================")
 
 @app.route("/")
 def index():
